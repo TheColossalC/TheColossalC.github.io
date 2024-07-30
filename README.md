@@ -1,6 +1,8 @@
-git clone git@github.com:hugoferreira/papyrus-theme.git
+    git clone git@github.com:hugoferreira/papyrus-theme.git
 
+    cd papyrus-theme/
 
+    jekyll serve --watch
 
-
-# TheColossalC.github.io
+# Access via
+# https://thecolossalc.github.io/
