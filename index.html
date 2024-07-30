@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#About {background-color: honeydew;}
+#Resume {background-color: papayawhip;}
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('About', this, 'coral')" id="defaultOpen">About</button>
+<button class="tablink" onclick="openPage('Resume', this, 'coral')">Resume</button>
+<button class="tablink" onclick="openPage('Code Examples', this, 'coral')">Code Examples</button>
+
+
+<div id="About" class="tabcontent">
+  <h3 style = color:black>Hello!</h3>
+  <p  style = color:black>	This is a  personal website of mine! If you're reading this, my contact info should have been included in the original document that linked you here - I don't include it here for personal privacy.<br><br>
+	I built it myself using a few hours of HTML tutorials to modify code I found in a book into something that gets my job done. I'm not a web developer and there's not enough hours in the day for me to learn every language (programming and linguistic) to the realistically unrealistic goal of mine to master them all.
+</p> 
+</div>
+
+<div id="Resume" class="tabcontent">
+  <h3 style = color:black>Work Experience</h3>
+  <p  style = color:black>A resume (of sorts) that includes my work experience</p>
+</div>
+
+<div id="Code Examples" class="tabcontent" style = background-color:#f2cdfe;>
+  <h3  style = color:black>Code Examples</h3>
+  <p style = color:black>Examples of some code - when I finally get around to learning HTML I'll clean up this tab to include filters for language and potentially by date.</p> 
+</div>
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
